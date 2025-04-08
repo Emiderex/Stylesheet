@@ -1,0 +1,35 @@
+html, body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 20px;
+    border-bottom: 1px solid rgb(87, 87, 92);
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h1, h2, p, footer {
+    padding: 0 20px;
+}
+
+nav a {
+    margin: 0 20px;
+}
+
+.nav, .main, #footer-p {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.main {
+    padding: 0 20px;
+}
