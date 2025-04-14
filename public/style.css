@@ -68,3 +68,33 @@ nav a {
 }
 
 /*CSS Flexbox*/
+.container {
+    display: flex;
+    gap: 10px;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .a {
+    background: crimson;
+    order: 1;
+  }
+
+  .b {
+    background: steelblue;
+    order: 0;
+  }
+
+  .c {
+    background: seagreen;
+    order: 2;
+  }
