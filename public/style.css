@@ -3,6 +3,7 @@
     --bg-color : black;
     --color : white;
     --color1 : grey;
+    --bordercolor : #c1b4b4;
 }
 
 html, body {
@@ -64,7 +65,10 @@ nav a {
 
 .gridcell {
     height: 100px;
+    border-radius: 10px;
+    color: var(--color);
     background-color: var(--color1);
+    border: 2px solid var(--bordercolor);
 }
 
 /*CSS Flexbox*/
