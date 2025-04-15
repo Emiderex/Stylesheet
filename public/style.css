@@ -75,7 +75,7 @@ nav a {
 }
 
 .gridcell, .flex-item {
-    height: 100px;
+    padding: 30px;
     border-radius: 10px;
     align-content: center;
     text-align: center;
@@ -118,4 +118,16 @@ nav a {
   .c {
     background: seagreen;
     order: 2;
+  }
+
+  /*Media Queries*/
+  @media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
   }
