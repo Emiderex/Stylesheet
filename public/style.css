@@ -1,133 +1,166 @@
 /*CSS variables*/
 :root {
-    --bg-color : black;
-    --color : white;
-    --color1 : grey;
-    --color2 : red;
-    --bordercolor : #c1b4b4;
+  --bg-color: black;
+  --color: white;
+  --color1: grey;
+  --color2: red;
+  --bordercolor: #c1b4b4;
 }
 
-html, body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 0;
-    margin: 0;
-    background-color: var(--bg-color);
-    color: var(--color);
+html,
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--color);
 }
 
 header {
-    padding: 20px;
-    border-bottom: 1px solid rgb(87, 87, 92);
+  padding: 20px;
+  border-bottom: 1px solid rgb(87, 87, 92);
 }
 
-h1, h2 {
-    padding: 0;
+h1,
+h2 {
+  padding: 0;
 }
 
 h1 {
-    font-size: 20px;
-    padding: 0;
-    margin: 10px 0;
+  font-size: 20px;
+  padding: 0;
+  margin: 10px 0;
 }
 
 h2 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
-h1, h2, p, footer {
-    padding: 0 20px;
+h1,
+h2,
+p,
+footer {
+  padding: 0 20px;
 }
 
 nav a {
-    margin: 0 20px;
-    color: var(--color);
+  margin: 0 20px;
+  color: var(--color);
 }
 
-.nav, .main, #footer-p {
-    max-width: 1250px;
-    margin: 0 auto;
+.nav,
+.main,
+#footer-p {
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
-.main, .footer {
-    padding: 0 20px;
-    max-width: 1200px;
+.main,
+.footer {
+  padding: 0 20px;
+  max-width: 1200px;
 }
 
 /*CSS GRID*/
 .grid-container {
-    color: var(--color);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    /* grid-auto-rows: 200px; */
-    /* justify-items: center;
+  color: var(--color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  /* grid-auto-rows: 200px; */
+  /* justify-items: center;
     align-items: center; */
 }
 
-
 .flex {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .flex-item {
-    flex: 1;
+  flex: 1;
 }
 
-.gridcell, .flex-item {
-    padding: 30px;
-    border-radius: 10px;
-    align-content: center;
-    text-align: center;
-    background-color: var(--color1);
-    border: 2px solid var(--bordercolor);
+.gridcell,
+.flex-item {
+  padding: 30px;
+  border-radius: 10px;
+  align-content: center;
+  text-align: center;
+  background-color: var(--color1);
+  border: 2px solid var(--bordercolor);
 }
 
 .flex-item:first-child {
-    order: 3;
-    background-color: var(--color2);
+  order: 3;
+  background-color: var(--color2);
 }
-
 
 /*CSS Flexbox used in About Pages*/
 .container {
-    display: flex;
+  display: flex;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.a {
+  background: crimson;
+  order: 1;
+}
+
+.b {
+  background: steelblue;
+  order: 0;
+}
+
+.c {
+  background: seagreen;
+  order: 2;
+}
+
+/*Animation effect on texts*/
+.sub-section p {
+  animation-name: slidein;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  /* animation-iteration-count: 3; */
+}
+
+/*Keyframe*/
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
   }
 
-  .box {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+  75% {
+    font-size: 100%;
+    margin-left: 25%;
+    width: 150%;
   }
 
-  .a {
-    background: crimson;
-    order: 1;
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/*Media Queries*/
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
   }
 
-  .b {
-    background: steelblue;
-    order: 0;
+  .grid-container {
+    grid-template-columns: 1fr;
   }
-
-  .c {
-    background: seagreen;
-    order: 2;
-  }
-
-  /*Media Queries*/
-  @media (max-width: 768px) {
-    .flex {
-        flex-direction: column;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-    
-  }
+}
